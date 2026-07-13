@@ -8,12 +8,12 @@ Short answer: not really, and yes.
 
 | Task | Result |
 |---|---|
-| Predict winner from Elo + opening + time control | ~52% accuracy — barely beats the Elo formula alone (51%) |
-| Same, but only large Elo gaps (400+) | Accuracy jumps up — Elo works when it should |
+| Predict winner from Elo + opening + time control | ~52% accuracy just beating the Elo formula alone (51%) |
+| Same, but only large Elo gaps (400+) | Accuracy jumps up as expected |
 | Predict blunders from clock time, move number, eval | ROC-AUC ~0.75, stable across 10 folds |
-| Upset rate vs blunder differential | Upsets track blunders closely — favours blunder more|
+| Upset rate vs blunder differential | Upsets track blunders closely and favours blunder more|
 
-Turns out single games are just noisy — even Elo, built specifically to predict outcomes, can't do much better than a coin flip once the ratings are close. But blunders themselves are predictable from stuff like time pressure, and blunders are basically the mechanism behind upsets.
+Turns out single games are noisy and close to a coin flip once the ratings are close. But blunders themselves are predictable from stuff like time pressure, and blunders predictably cause upsets.
 
 ## Notebooks
 
